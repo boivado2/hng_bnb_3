@@ -67,7 +67,7 @@ function Places() {
           <li className=' whitespace-nowrap cursor-pointer'>{item}</li>
          ))}
         </ul>
-        <div className=' cursor-pointer px-6 outline outline-1 py-2 text-base bg-white text-custom-pink-100 rounded-md  flex gap-3 items-center '>
+        <div className=' justify-center cursor-pointer px-6 outline outline-1 py-2 text-base bg-white text-custom-pink-100 rounded-md  flex gap-3 items-center '>
           <small>Location</small>
           <img className=' w-8' src={settingIcon} alt='' />
         </div>

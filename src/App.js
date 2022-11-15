@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import './App.css';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
@@ -23,15 +24,25 @@ function App() {
   }
 
   return (
-    <div className={`App font-custom-rose ${overlay ? 'fixed' : 'relative'}`}>
-      <Navbar handleConnectWallet={handleConnectWallet}/>
+    <Router>
 
-      <Home modal={modal} overlay={overlay} handleCloseModal={handleCloseModal} />
-      {/* <Places/> */}
+    <div className={`App font-custom-rose ${overlay ? 'fixed' : 'relative'}`}>
+      <Navbar handleConnectWallet={handleConnectWallet} />
+        <Routes>
+          <Route
+            path='/'
+            index
+            element={<Home modal={modal} overlay={overlay} handleCloseModal={handleCloseModal} />
+            } />
+          
+          <Route path='/places' element={<Places/>}/>
+        </Routes>
       
       <Footer/>
 
-    </div>
+      </div>
+      </Router>
+
   );
 }
 

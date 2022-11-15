@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Logo from './assests/logo.svg'
 
 function Navbar({handleConnectWallet}) {
@@ -13,13 +14,13 @@ function Navbar({handleConnectWallet}) {
 
           <ul className=' flex justify-between gap-7 flex-wrap'>
                      
-            <li className=' cursor-pointer'>Home</li>
+            <Link to="/" className=' cursor-pointer'>Home</Link>
                      
-            <li className=' cursor-pointer'>Place to stay</li>
+            <Link to="/places" className=' cursor-pointer'>Place to stay</Link>
               
-            <li className=' cursor-pointer'>Nft</li>
+            <Link to="/nft" className=' cursor-pointer'>Nft</Link>
           
-            <li className=' cursor-pointer'>Community</li>
+            <Link to="/community" className=' cursor-pointer'>Community</Link>
                      
           </ul>
           
