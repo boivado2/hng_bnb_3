@@ -17,6 +17,8 @@ import frame_13 from '../components/assests/frames/Frame 151 (13).svg'
 import frame_14 from '../components/assests/frames/Frame 151 (14).svg'
 import frame_15 from '../components/assests/frames/Frame 151 (15).svg'
 import settingIcon from '../components/assests/setting-5.svg'
+import Modal from './../components/Modal';
+import Overlay from './../components/Overlay';
 
 
 
@@ -57,12 +59,18 @@ const filteringList = [
   "Farm",
 ]
 
-function Places() {
+function Places({modal, handleCloseModal, overlay}) {
   return (
-    <section className=' container mx-auto'>
+    <section className='w-full'>
+      <Modal modal={modal} handleCloseModal={handleCloseModal} />
+      
+      <Overlay overlay={overlay} />
+      
+    <div className='container mx-auto w-full'>
+
 
       <header className='w-full flex justify-start  items-center gap-6 p-5 py-14 md:px-9'>
-        <ul className='flex gap-10   overflow-x-auto px-3 py-2 flex-nowrap'>
+        <ul className='flex gap-10   overflow-x-auto px-3 py-2 flex-nowrap'> 
         {filteringList.map(item => (
           <li className=' whitespace-nowrap cursor-pointer'>{item}</li>
          ))}
@@ -75,7 +83,9 @@ function Places() {
 
       <Listings items={places}/>
 
-    </section>
+      </div>
+      </section>
+
   )
 }
 

@@ -36,12 +36,12 @@ const places = [
 
 function Home({modal, overlay, handleCloseModal}) {
   return (
-    <main className=''>
+    <main className={``}>
       <Modal modal={modal} handleCloseModal={handleCloseModal} />
       <Overlay overlay={overlay}/>
       <section className='flex flex-col-reverse md:flex-row gap-5 items-center p-3 container mx-auto'>
         
-        <aside className='w-[100%] flex flex-col items-start justify-center gap-10 p-3 lg:px-10 py-3'>
+        <aside className='w-[100%] flex flex-col items-start justify-center gap-7 p-3 lg:px-10 py-3'>
           <h2 className='text-start text-2xl md:text-4xl font-bold'>Rent a <span className=' text-custom-pink-100'>Place</span> away from <span className=' text-custom-pink-100'>Home</span> in the <span className=' text-custom-pink-100'>Metaverse</span></h2>
 
           <p className=' text-start text-base md:text-xl'>

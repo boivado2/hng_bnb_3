@@ -12,7 +12,6 @@ function App() {
   const [overlay, setOverlay] = useState(false)
 
   const handleConnectWallet = () => {
-    console.log("working")
     setShowModal(true)
     setOverlay(true)
   }
@@ -20,13 +19,12 @@ function App() {
   const handleCloseModal = () => {
     setShowModal(false)
     setOverlay(false)
-    console.log("working")
   }
 
   return (
     <Router>
 
-    <div className={`App font-custom-rose ${overlay ? 'fixed' : 'relative'}`}>
+    <div className={`App font-custom-rose w-full ${overlay ? ' fixed' : ' static'}`}>
       <Navbar handleConnectWallet={handleConnectWallet} />
         <Routes>
           <Route
@@ -35,7 +33,7 @@ function App() {
             element={<Home modal={modal} overlay={overlay} handleCloseModal={handleCloseModal} />
             } />
           
-          <Route path='/places' element={<Places/>}/>
+          <Route path='/places' element={<Places modal={modal} overlay={overlay} handleCloseModal={handleCloseModal}/>}/>
         </Routes>
       
       <Footer/>
