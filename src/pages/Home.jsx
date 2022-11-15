@@ -38,7 +38,7 @@ function Home({modal, overlay, handleCloseModal}) {
   return (
     <main className={``}>
       <Modal modal={modal} handleCloseModal={handleCloseModal} />
-      <Overlay overlay={overlay}/>
+      <Overlay overlay={overlay} handleCloseModal={handleCloseModal} />
       <section className='flex flex-col-reverse md:flex-row gap-5 items-center p-3 container mx-auto'>
         
         <aside className='w-[100%] flex flex-col items-start justify-center gap-7 p-3 lg:px-10 py-3'>
@@ -50,12 +50,12 @@ function Home({modal, overlay, handleCloseModal}) {
 
           <form className='flex w-full flex-col md:flex-row gap-4 md:gap-0'>
             <input type="text" className='w-full  md:w-[70%] rounded-md md:rounded-r-none px-8 py-2 bg-white text-base outline-none border-[0.1px] md:border-r-0 border-purple-300' placeholder='Search for location' />
-            <button type='submit' className='w-full md:w-[30%] px-10 py-2 text-base bg-purple-500 rounded-md rounded-l-none'>Search</button>
+            <button type='submit' className='flex justify-center w-full md:w-[30%] px-10 py-2 text-base bg-purple-500 rounded-md rounded-l-none'>Search</button>
           </form>
         </aside>
 
         <aside className='w-full flex items-center justify-center'>
-          <img className='w-full md:w-[70%] scale-90' src={showcase_img} alt=""/>
+          <img className='w-full md:w-[70%] scale-75 md:scale-90 lg:scale-95' src={showcase_img} alt=""/>
         </aside>
       </section>
 

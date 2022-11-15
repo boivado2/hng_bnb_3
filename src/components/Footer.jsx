@@ -29,11 +29,11 @@ function Footer() {
   return (
     <footer className=' px-9 py-7 bg-custom-black-100 w-full text-white'>
       <div className=' container mx-auto'>
-      <div className='flex flex-col lg:flex-row justify-between lg:items-stretch items-center gap-6 '>
+      <div className='flex flex-col md:flex-row justify-between md:items-stretch items-center gap-6 '>
         <aside className='flex flex-col items-start relative gap-8 w-full'>
-          <img className=' w-48 mb-12 lg:mb-0' src={logo} alt="" />
+          <img className=' w-48 mb-12md:mb-0 my-3' src={logo} alt="" />
           
-          <div className=' lg:absolute  lg:bottom-0 flex gap-7 items-center'> 
+          <div className=' md:absolute  md:bottom-0 flex gap-7 items-center'> 
             <img src={facebook_icon } alt="facebook social" />
             <img src={instagram_icon} alt="instagram social"/>
             <img src={twitter_icon} alt="twitter"/>
@@ -41,20 +41,20 @@ function Footer() {
 
         </aside>
 
-        <aside className='flex flex-col gap-5 items-start w-full py-4 border-b lg:border-0'>
-          <h3 className=' my-6  text-xl font-medium'>Community</h3>
+        <aside className='flex flex-col gap-5 items-start w-full border-b md:border-0'>
+          <h3 className=' my-3  text-xl font-medium'>Community</h3>
           {community.map(c => (
-            <a key={c} href="#home">{c}</a>
+            <a  className='pb-3' key={c} href="#home">{c}</a>
             
           )
           )}
         </aside>
 
-        <aside className='flex flex-col gap-5 items-start w-full  py-4 border-b lg:border-0'>
-          <h3 className=' my-6 text-xl font-medium'>Places</h3>
+        <aside className='flex flex-col gap-5 items-start w-full  border-b md:border-0'>
+          <h3 className=' my-3 text-xl font-medium'>Places</h3>
           
           {places.map(p => (
-            <a key={p} href="#home">{p}</a>
+            <a className='pb-3' key={p} href="#home">{p}</a>
             
           )
           )}
@@ -62,10 +62,10 @@ function Footer() {
         </aside>
 
         <aside className='flex flex-col gap-5 items-start w-full'>
-          <h3 className=' my-6 text-xl font-medium'>About us</h3>
+          <h3 className=' my-3 text-xl font-medium'>About us</h3>
           
           {aboutUs.map(a => (
-            <a key={a} href="#home">{a}</a>
+            <a className='pb-3' key={a} href="#home">{a}</a>
             
           )
           )}

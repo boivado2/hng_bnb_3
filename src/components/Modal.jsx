@@ -8,7 +8,7 @@ import close from './assests/x.svg'
 function Modal({ modal, handleCloseModal }) {
   if (!modal) return;
   return (
-    <div className=' w-full md:w-[50%] mx-auto md:translate-y-[50%] md:translate-x-[50%]  border rounded-md z-50 left-0 absolute text-custom-black-100 bg-white'>
+    <div className=' w-full md:w-[50%] mx-auto md:translate-y-[40%] md:translate-x-[50%]  border rounded-md z-50 left-0 absolute text-custom-black-100 bg-white'>
       <div>
         <div className='flex justify-between items-center  px-5 py-3 border-b'>
         <h2 className=' text-xl font-semibold'>Connect Wallet</h2>

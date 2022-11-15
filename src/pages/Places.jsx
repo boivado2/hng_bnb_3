@@ -64,7 +64,7 @@ function Places({modal, handleCloseModal, overlay}) {
     <section className='w-full'>
       <Modal modal={modal} handleCloseModal={handleCloseModal} />
       
-      <Overlay overlay={overlay} />
+      <Overlay overlay={overlay} handleCloseModal={handleCloseModal} />
       
     <div className='container mx-auto w-full'>
 
